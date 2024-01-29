@@ -20,7 +20,7 @@ class _EventPageState extends State<EventPage> {
       backgroundColor: Colors.black,
       body: Column(
         children: [
-          SizedBox(height: MediaQuery.of(context).size.height/20,),
+          SizedBox(height: MediaQuery.of(context).size.height/40,),
           Container(
             height: screenSize.height * 0.1,
             color: Colors.black, // App bar altındaki renk
@@ -71,7 +71,7 @@ class _EventPageState extends State<EventPage> {
     style: TextStyle(
       color: _currentPageIndex == index ? Colors.red : Colors.white,
       fontWeight: FontWeight.bold,
-      fontSize: MediaQuery.of(context).size.width * 0.02,
+      fontSize: MediaQuery.of(context).size.width * 0.03,
     ),
   ),
   SizedBox(height: MediaQuery.of(context).size.width * 0.005), // Adjust the spacing

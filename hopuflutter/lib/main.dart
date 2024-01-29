@@ -27,14 +27,17 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   final PageController _pageController = PageController();
   int _currentPageIndex = 0;
+  
 
   @override
   Widget build(BuildContext context) {
+    var screenSize = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.black,
       body: Column(
         children: [
           AnimatedCircularContainer(
+            
             onTap: () {
               _pageController.animateToPage(
                 0, // HomePage'in index'i
@@ -51,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
           Container(
-            height: MediaQuery.of(context).size.height * 0.05,
+            height: screenSize.height * 0.1,
             color: Colors.black,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -90,6 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Widget buildNavItem(int index, String title) {
+    var screenSize = MediaQuery.of(context).size;
     return GestureDetector(
       onTap: () {
         _pageController.animateToPage(
@@ -99,14 +103,15 @@ class _MyHomePageState extends State<MyHomePage> {
         );
       },
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 16),
+        padding: EdgeInsets.symmetric(horizontal: screenSize.width*0.03),
         alignment: Alignment.center,
         child: Text(
           title,
           style: TextStyle(
             color: _currentPageIndex == index ? Colors.red : Colors.white,
             fontWeight: FontWeight.bold,
-            fontSize: MediaQuery.of(context).size.width * 0.018,
+            fontSize: screenSize.width * 0.04,
+            
           ),
         ),
       ),
@@ -155,6 +160,7 @@ class _AnimatedCircularContainerState
 
   @override
   Widget build(BuildContext context) {
+    var screenSize = MediaQuery.of(context).size;
     return GestureDetector(
       onTap: () {
         widget.onTap();
@@ -164,7 +170,7 @@ class _AnimatedCircularContainerState
         animation: _animationController,
         builder: (context, child) {
           return Container(
-            padding: EdgeInsets.all(5),
+            padding: EdgeInsets.all(screenSize.width*0.05),
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               color: widget.isActive

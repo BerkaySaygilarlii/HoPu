@@ -10,7 +10,7 @@ class ArtistsPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.black,
       body: ListView.builder(
-        itemCount: 4, // Toplam 2 satır olacak şekilde ayarlandı
+        itemCount: 5, // Toplam 2 satır olacak şekilde ayarlandı
         itemBuilder: (context, rowIndex) {
           return Container(
             margin: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.width*0.05),
@@ -97,7 +97,7 @@ class ArtistsPage extends StatelessWidget {
     required BuildContext context,
   }) {
     return Container(
-      padding: EdgeInsets.all(MediaQuery.of(context).size.width*0.06),
+      padding: EdgeInsets.all(MediaQuery.of(context).size.width*0.03),
       decoration: BoxDecoration(
               border: Border.all(color: Colors.red.withOpacity(0.3)),
               borderRadius: BorderRadius.circular(10),  
@@ -117,7 +117,7 @@ class ArtistsPage extends StatelessWidget {
           SizedBox(height: MediaQuery.of(context).size.height*0.02),
           Text(
             artistName,
-            style: TextStyle(fontSize: MediaQuery.of(context).size.width*0.02, fontWeight: FontWeight.normal, color: Colors.white.withOpacity(0.6)),
+            style: TextStyle(fontSize: MediaQuery.of(context).size.width*0.03, fontWeight: FontWeight.normal, color: Colors.white.withOpacity(0.6)),
           ),
           SizedBox(height: MediaQuery.of(context).size.height*0.035),
           ElevatedButton(
@@ -129,11 +129,11 @@ class ArtistsPage extends StatelessWidget {
               shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(2.0), // Butonun köşe yarıçapı
               ),
-              padding: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.height*0.01, horizontal: MediaQuery.of(context).size.width*0.03),
+              padding: EdgeInsets.all(MediaQuery.of(context).size.width*0.03),
     
             ),
             child: Text('View More',
-            style: TextStyle(fontSize: MediaQuery.of(context).size.width*0.02, fontWeight: FontWeight.normal, color: Colors.white),),
+            style: TextStyle(fontSize: MediaQuery.of(context).size.width*0.03, fontWeight: FontWeight.normal, color: Colors.white),),
           ),
         ],
       ),
