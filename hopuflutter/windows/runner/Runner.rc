@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "hopuflutter" "\0"
+            VALUE "FileDescription", "hopudeneme" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "hopuflutter" "\0"
+            VALUE "InternalName", "hopudeneme" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2024 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "hopuflutter.exe" "\0"
-            VALUE "ProductName", "hopuflutter" "\0"
+            VALUE "OriginalFilename", "hopudeneme.exe" "\0"
+            VALUE "ProductName", "hopudeneme" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

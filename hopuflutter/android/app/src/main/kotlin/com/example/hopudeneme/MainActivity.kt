@@ -1,4 +1,4 @@
-package com.example.hopuflutter
+package com.example.hopudeneme
 
 import io.flutter.embedding.android.FlutterActivity
 
